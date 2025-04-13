@@ -1,0 +1,59 @@
+<!-- 
+  File: quiz.html
+  Author: 
+  SAIBT ID: 
+  Description: Assignment 2 - HTML file
+  This is my own work as defined by SAIBT's Academic Misconduct Policy.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Results</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    img {
+      width: 300px;
+      margin: 20px auto;
+    }
+    #result {
+      margin-top: 30px;
+    }
+    a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #e62429;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    a.button:hover {
+      background-color: #b71c1c;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Congratulations!</h1>
+  
+  <div id="result"></div>
+  <br>
+  <a href="index.html" class="button">Home</a>
+
+  <script>
+    const score = localStorage.getItem("score");
+    const message = localStorage.getItem("message");
+
+    document.getElementById("result").innerHTML = `
+      <h2>You Scored: ${score} Out of 15</h2>
+      <img src="images/thor.jpg" alt="Marvel Hero">
+      <p>${message}</p>
+    `;
+  </script>
+</body>
+</html>
